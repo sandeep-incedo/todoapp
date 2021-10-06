@@ -1,0 +1,84 @@
+get http://localhost:4002/welcome
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YmUyZDc4NWQ4N2UzNTQzMGJhOTI5IiwiZW1haWwiOiJzYW5kZWVwLnlhZGF2M0BpbmNlZG9pbmMuY29tIiwiaWF0IjoxNjMzNDEzMzQ3LCJleHAiOjE2MzM0MjA1NDd9.03h1pGSk8OwVw3UCfGNuzdQ6jbtm5tDQhaeXO1ax5yo
+
+###
+
+post http://localhost:4002/employees
+Content-Type: application/json
+
+{
+    "id":4, "name":"Manish", "age":28
+}
+
+###
+
+POST http://localhost:4002/register
+Content-Type: application/json
+
+{
+    "first_name":"Sandeep",
+    "last_name":"Yadav",
+    "email":"u@u.com",
+    "password":"u"
+}
+
+###
+POST http://localhost:4002/login
+Content-Type: application/json
+
+{
+    "email":"u@u.com",
+    "password":"u"
+}
+
+###
+
+POST http://localhost:4002/task/createTask
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YmVhNmEwNGI4NDY4ZmFkZDczYjdjIiwiZW1haWwiOiJ1QHUuY29tIiwiaWF0IjoxNjMzNDQ3MzE4LCJleHAiOjE2MzM0NTQ1MTh9.3fW_WHFQMuA_5FavTuBJeuhZbrh-oimwlM6raqTge5A
+Content-Type: application/json
+
+{
+    "name":"HomeWork",
+    "description":" Do Home Work of Science",
+    "deadline":"{{$datetime '2021-11-01'}}",
+    "priority":"High",
+    "status":0,
+    "bucket":""
+}
+
+###
+
+get http://localhost:4002/task/getTasks
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YmVhNmEwNGI4NDY4ZmFkZDczYjdjIiwiZW1haWwiOiJ1QHUuY29tIiwiaWF0IjoxNjMzNDMxNjg2LCJleHAiOjE2MzM0Mzg4ODZ9.GKDr_I0DGR_dkYP9IzEGbScyLpqds2g5byT8CmTlWIw
+Content-Type: application/json
+
+###
+get http://localhost:4002/task/getTask/615c88330d043cbf20a193c5
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YzcwNTlhNTgxMGUxYThlYzI0ZmJiIiwiZW1haWwiOiJ1QHUuY29tIiwiaWF0IjoxNjMzNDU2NzM2LCJleHAiOjE2MzM0NjM5MzZ9.Qnvl9XGPE6DoM8meRsEZp4JvWIO8oU5CdwKQYlwChPo
+Content-Type: application/json
+
+###
+
+put http://localhost:4002/task/updateTask
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YmVhNmEwNGI4NDY4ZmFkZDczYjdjIiwiZW1haWwiOiJ1QHUuY29tIiwiaWF0IjoxNjMzNDMxNjg2LCJleHAiOjE2MzM0Mzg4ODZ9.GKDr_I0DGR_dkYP9IzEGbScyLpqds2g5byT8CmTlWIw
+Content-Type: application/json
+
+{
+    "name":"HomeWork 5"
+}
+
+###
+
+DELETE http://localhost:4002/task/deleteTask
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YmVhNmEwNGI4NDY4ZmFkZDczYjdjIiwiZW1haWwiOiJ1QHUuY29tIiwiaWF0IjoxNjMzNDMxNjg2LCJleHAiOjE2MzM0Mzg4ODZ9.GKDr_I0DGR_dkYP9IzEGbScyLpqds2g5byT8CmTlWIw
+Content-Type: application/json
+
+{
+    "id":"615bf4c7b7dbdc5820f6aaa3"
+}
+
+###
+
+GET http://localhost:4002/task/getTask/615c34412f5d88d9d8e97217
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE1YmVhNmEwNGI4NDY4ZmFkZDczYjdjIiwiZW1haWwiOiJ1QHUuY29tIiwiaWF0IjoxNjMzNDMxNjg2LCJleHAiOjE2MzM0Mzg4ODZ9.GKDr_I0DGR_dkYP9IzEGbScyLpqds2g5byT8CmTlWIw
+Content-Type: application/json

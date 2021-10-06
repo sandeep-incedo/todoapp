@@ -1,6 +1,7 @@
 # todoapp
 Interview Projects
 
+Make sure you copy .env file from here
 
 Run
 
